@@ -69,7 +69,7 @@ def on_click(event, entry_var, entry, def_name):
 
 root = tk.Tk()
 root.title('vCard QR code creater')
-root.resizable(1, 1)
+root.resizable(0, 0)
 
 reserved_names = [
     'First name', 'Last name', 'Mobile', 'Phone', 'your@email.com', 'Company', 'Your job', 'ZIP', 'www.your-website.com'

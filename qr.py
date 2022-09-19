@@ -68,7 +68,7 @@ def on_click(event, entry_var, entry, def_name):
         entry.config(foreground='black')
 
 root = tk.Tk()
-root.title('vCard QR code creater')
+root.title('vCard QR code creator')
 root.resizable(0, 0)
 
 reserved_names = [

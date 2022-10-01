@@ -13,17 +13,18 @@ def valid_entry(input):
 
 def vcard_create():
     data = f'''BEGIN:VCARD
-VERSION:3.0
-FN;CHARSET=UTF-8:{valid_entry(first_name.get())} {valid_entry(last_name.get())}
-N;CHARSET=UTF-8:{valid_entry(first_name.get())};{valid_entry(last_name.get())};;;
-TEL;TYPE=HOME,VOICE:{valid_entry(home_phone.get())}
-TEL;TYPE=WORK,VOICE:{valid_entry(work_phone.get())}
-EMAIL:{valid_entry(email.get())}
-ORG;CHARSET=UTF-8:{valid_entry(company_name.get())}
-TITLE;CHARSET=UTF-8:{valid_entry(job_title.get())}
-URL:{valid_entry(website.get())}
-ADR:;;{street.get()};{city.get()};{state.get()};{valid_entry(zip_code.get())};{country.get()}
-END:VCARD'''
+    VERSION:3.0
+    FN;CHARSET=UTF-8:{valid_entry(first_name.get())} {valid_entry(last_name.get())}
+    N;CHARSET=UTF-8:{valid_entry(first_name.get())};{valid_entry(last_name.get())};;;
+    TEL;TYPE=HOME,VOICE:{valid_entry(home_phone.get())}
+    TEL;TYPE=WORK,VOICE:{valid_entry(work_phone.get())}
+    EMAIL:{valid_entry(email.get())}
+    ORG;CHARSET=UTF-8:{valid_entry(company_name.get())}
+    TITLE;CHARSET=UTF-8:{valid_entry(job_title.get())}
+    URL:{valid_entry(website.get())}
+    ADR:;;{street.get()};{city.get()};{state.get()};{valid_entry(zip_code.get())};{country.get()}
+    END:VCARD'''
+    data = data.replace(' ', '')
 
     qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_L)
     qr.border = 0
